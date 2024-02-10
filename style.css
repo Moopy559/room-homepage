@@ -1,0 +1,9 @@
+* {
+  outline: solid 1px red;
+  margin: 0px;
+  padding: 0px;
+}
+
+.hidden {
+  display: none;
+}

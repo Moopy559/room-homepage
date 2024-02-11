@@ -139,3 +139,32 @@ li {
 .hero-image {
   grid-area: hero-image;
 }
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 3rem;
+  }
+  img {
+    width: 100vw;
+    height: auto;
+  }
+  .menu {
+    padding: 2rem;
+  }
+  .bento {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hero-image"
+      "blurb"
+      "dark-image"
+      "about-us"
+      "light-image";
+  }
+  .blurb {
+    padding: 2rem;
+  }
+  .about-us {
+    padding: 2rem;
+  }
+}

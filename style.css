@@ -9,13 +9,37 @@
 }
 
 * {
-  outline: solid 1px red;
+  /* outline: solid 1px red; */
   margin: 0px;
   padding: 0px;
 }
 
 body {
   font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-weight: 600;
+}
+
+p {
+  color: var(--dark-grey);
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
 }
 
 img {
@@ -26,21 +50,27 @@ img {
 
 li {
   list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .menu {
-  padding: 2rem;
+  padding: 6rem;
   position: absolute;
   display: grid;
   grid-template-columns: 2fr repeat(4, 1fr);
-  gap: 1rem;
+  gap: 2rem;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 1.25rem;
 }
 
 .bento {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1.1fr 0.6fr 1.3fr;
-  grid-template-rows: 1.6fr 0.4fr 1fr;
+  grid-template-columns: 1fr 1.3fr 0.4fr 1.3fr;
+  grid-template-rows: 1.7fr 0.3fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
     "hero-image hero-image blurb blurb"
@@ -54,6 +84,11 @@ li {
   gap: 0px 0px;
   grid-template-areas: ". .";
   grid-area: arrows;
+  background-color: var(--black);
+  justify-items: center;
+  align-items: center;
+  min-height: fit-content;
+  padding: 2rem 0rem;
 }
 .light-image {
   grid-area: light-image;
@@ -63,9 +98,17 @@ li {
 }
 .about-us {
   grid-area: about-us;
+  padding: 6rem;
 }
 .blurb {
   grid-area: blurb;
+  padding: 8rem;
+  div {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
 }
 .empty {
   grid-area: empty;

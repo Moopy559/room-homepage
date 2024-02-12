@@ -5,6 +5,9 @@ const rightArrow = document.querySelectorAll(".right-arrow");
 const heroImage = document.getElementById("hero-image");
 const header = document.getElementById("header");
 const blurb = document.getElementById("blurb");
+const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+const hamburger = document.getElementById("hamburger");
+const exit = document.getElementById("exit");
 let count = 1;
 updateContent();
 
@@ -20,6 +23,14 @@ rightArrow.forEach((arrow) => {
     incrementCount();
     updateContent();
   });
+});
+
+hamburger.addEventListener("click", () => {
+  mobileMenuOverlay.classList.remove("hidden");
+});
+
+exit.addEventListener("click", () => {
+  mobileMenuOverlay.classList.add("hidden");
 });
 
 function decrementCount() {

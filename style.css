@@ -69,6 +69,14 @@ li {
   }
 }
 
+.mobile-logo {
+  display: hidden;
+}
+
+.mobile-menu {
+  display: hidden;
+}
+
 .bento {
   height: 100vh;
   display: grid;
@@ -144,8 +152,12 @@ li {
   display: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 /* RESPONSIVENESS */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   h1 {
     font-size: 3rem;
   }
@@ -153,9 +165,52 @@ li {
     width: 100%;
     height: fit-content;
   }
+
   .menu {
-    padding: 2rem;
+    display: hidden;
   }
+
+  .mobile-logo {
+    z-index: 999;
+    padding: 2rem 0rem;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 100vw;
+    :nth-child(1) {
+      padding-right: 4rem;
+    }
+  }
+
+  #mobile-menu-overlay {
+    display: fixed;
+  }
+  .mobile-menu {
+    z-index: 999;
+    background-color: var(--white);
+    padding: 2rem 0rem;
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100vw;
+    color: var(--black);
+    font-weight: 500;
+    font-size: 1.25rem;
+    li:hover {
+      cursor: pointer;
+    }
+  }
+
+  .fade {
+    z-index: 998;
+    height: 100%;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.342);
+    position: fixed;
+  }
+
   .bento {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -180,9 +235,8 @@ li {
   }
   .mobile {
     position: absolute;
-    bottom: 5px;
+    bottom: 4px;
     width: 100vw;
-    z-index: 999;
     display: grid;
     grid-template-columns: 1.5fr 0.5fr;
     grid-template-rows: 1fr;

@@ -1,21 +1,25 @@
 const screenWidth = window.innerWidth;
 let screen = screenWidth < 400 ? "mobile" : "desktop";
-const leftArrow = document.getElementById("left-arrow");
-const rightArrow = document.getElementById("right-arrow");
+const leftArrow = document.querySelectorAll(".left-arrow");
+const rightArrow = document.querySelectorAll(".right-arrow");
 const heroImage = document.getElementById("hero-image");
 const header = document.getElementById("header");
 const blurb = document.getElementById("blurb");
 let count = 1;
 updateContent();
 
-leftArrow.addEventListener("click", () => {
-  decrementCount();
-  updateContent();
+leftArrow.forEach((arrow) => {
+  arrow.addEventListener("click", () => {
+    decrementCount();
+    updateContent();
+  });
 });
 
-rightArrow.addEventListener("click", () => {
-  incrementCount();
-  updateContent();
+rightArrow.forEach((arrow) => {
+  arrow.addEventListener("click", () => {
+    incrementCount();
+    updateContent();
+  });
 });
 
 function decrementCount() {

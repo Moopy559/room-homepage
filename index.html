@@ -18,10 +18,10 @@
     </nav>
     <section class="bento">
       <div class="arrows">
-        <button id="left-arrow">
+        <button class="left-arrow">
           <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#a1a1a1" fill="none" fill-rule="evenodd"/></svg>
         </button>
-        <button id="right-arrow">
+        <button class="right-arrow">
           <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#a1a1a1" fill="none" fill-rule="evenodd"/></svg>
         </button>
       </div>
@@ -53,12 +53,21 @@
           </div>
       </div>
       <div class="empty"></div>
-      <img id="hero-image"
-      class="hero-image"
-        src="./images/desktop-image-hero-1.jpg"
-        alt="hero image of geometric chairs and a wooden table"
-      />
-      
+      <div class="hero-image">
+        <img id="hero-image"
+          src="./images/desktop-image-hero-1.jpg"
+          alt="hero image of geometric chairs and a wooden table"
+        />
+        <div class="mobile">
+          <div class="mobile-arrows">
+            <button class="left-arrow">
+            <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#a1a1a1" fill="none" fill-rule="evenodd"/></svg>
+          </button>
+          <button class="right-arrow">
+            <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#a1a1a1" fill="none" fill-rule="evenodd"/></svg>
+          </button>
+        </div>
+      </div>
     </section>
     <script src="script.js"></script>
   </body>

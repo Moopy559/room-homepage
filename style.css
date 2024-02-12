@@ -140,14 +140,18 @@ li {
   grid-area: hero-image;
 }
 
+.mobile {
+  display: hidden;
+}
+
 /* RESPONSIVENESS */
 @media screen and (max-width: 400px) {
   h1 {
     font-size: 3rem;
   }
   img {
-    width: 100vw;
-    height: auto;
+    width: 100%;
+    height: fit-content;
   }
   .menu {
     padding: 2rem;
@@ -166,5 +170,46 @@ li {
   }
   .about-us {
     padding: 2rem;
+  }
+  .arrows {
+    display: none;
+  }
+  .hero-image {
+    position: relative;
+    max-height: max-content;
+  }
+  .mobile {
+    position: absolute;
+    bottom: 5px;
+    width: 100vw;
+    z-index: 999;
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". mobile-arrows";
+  }
+  .mobile-arrows {
+    grid-area: mobile-arrows;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--black);
+    min-height: 45px;
+    button {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--black);
+      border: none;
+    }
+    button:hover {
+      background-color: var(--very-dark-grey);
+      cursor: pointer;
+      transition: background-color 200ms;
+    }
+    button:not(:hover) {
+      transition: background-color 200ms;
+    }
   }
 }
